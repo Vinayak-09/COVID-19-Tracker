@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/item_background"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp">
+
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/numbers"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/re">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dis"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="District : "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/dis"
+                android:layout_marginStart="5dp"
+                android:textSize="16sp"
+                android:id="@+id/name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dis"
+                android:layout_marginTop="5dp"
+                android:text="Confirmed Cases : "
+                android:id="@+id/disConfirmed"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/disConfirmed"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/name"
+                android:id="@+id/confirmed"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/disConfirmed"
+                android:text="Active Cases : "
+                android:id="@+id/disActive"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/disActive"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/confirmed"
+                android:id="@+id/active"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/disActive"
+                android:text="Deceased Cases : "
+                android:id="@+id/disDeceased"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/disDeceased"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/active"
+                android:id="@+id/deceased"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/disDeceased"
+                android:text="Recovered Cases : "
+                android:id="@+id/disRecovered"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/disRecovered"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/deceased"
+                android:id="@+id/recovered"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_alignParentEnd="true"
+            android:id="@+id/re"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            app:indicatorSize="50dp"
+            android:id="@+id/analysis"
+            android:progress="70"
+            android:backgroundTint="@color/black"
+            app:showAnimationBehavior="inward"
+            app:trackColor="#A3454349"
+            app:indicatorColor="#FF3700B3"
+            android:progressBackgroundTint="@color/black"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:layout_centerInParent="true"
+            android:id="@+id/recoveryText"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            />
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
